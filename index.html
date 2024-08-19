@@ -1,0 +1,866 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>M3_MQP_Answers</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-default_background {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 237, 214, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 237, 214, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(0, 0, 0, 0.06); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(249, 228, 188, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="2d8f72ba-0c6e-437a-ac43-d9a4a49f4a3a" class="page sans"><header><img class="page-cover-image" src="https://images.unsplash.com/photo-1579833981331-676fa2bae313?ixlib=rb-4.0.3&amp;q=85&amp;fm=jpg&amp;crop=entropy&amp;cs=srgb" style="object-position:center 50%"/><div class="page-header-icon page-header-icon-with-cover"><img class="icon" src="https://www.notion.so/icons/photo-landscape_blue.svg"/></div><h1 class="page-title">M3_MQP_Answers</h1><p class="page-description"></p><table class="properties"><tbody><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesMultipleSelect"><path d="M1.91602 4.83789C2.44238 4.83789 2.87305 4.40723 2.87305 3.87402C2.87305 3.34766 2.44238 2.91699 1.91602 2.91699C1.38281 2.91699 0.952148 3.34766 0.952148 3.87402C0.952148 4.40723 1.38281 4.83789 1.91602 4.83789ZM5.1084 4.52344H14.3984C14.7607 4.52344 15.0479 4.23633 15.0479 3.87402C15.0479 3.51172 14.7607 3.22461 14.3984 3.22461H5.1084C4.74609 3.22461 4.45898 3.51172 4.45898 3.87402C4.45898 4.23633 4.74609 4.52344 5.1084 4.52344ZM1.91602 9.03516C2.44238 9.03516 2.87305 8.60449 2.87305 8.07129C2.87305 7.54492 2.44238 7.11426 1.91602 7.11426C1.38281 7.11426 0.952148 7.54492 0.952148 8.07129C0.952148 8.60449 1.38281 9.03516 1.91602 9.03516ZM5.1084 8.7207H14.3984C14.7607 8.7207 15.0479 8.43359 15.0479 8.07129C15.0479 7.70898 14.7607 7.42188 14.3984 7.42188H5.1084C4.74609 7.42188 4.45898 7.70898 4.45898 8.07129C4.45898 8.43359 4.74609 8.7207 5.1084 8.7207ZM1.91602 13.2324C2.44238 13.2324 2.87305 12.8018 2.87305 12.2686C2.87305 11.7422 2.44238 11.3115 1.91602 11.3115C1.38281 11.3115 0.952148 11.7422 0.952148 12.2686C0.952148 12.8018 1.38281 13.2324 1.91602 13.2324ZM5.1084 12.918H14.3984C14.7607 12.918 15.0479 12.6309 15.0479 12.2686C15.0479 11.9062 14.7607 11.6191 14.3984 11.6191H5.1084C4.74609 11.6191 4.45898 11.9062 4.45898 12.2686C4.45898 12.6309 4.74609 12.918 5.1084 12.918Z"></path></svg></span>Module</th><td><span class="selected-value select-value-color-orange">Module 3</span></td></tr></tbody></table></header><div class="page-body"><figure id="fd8c0be5-c6a2-43d0-94cf-d885ebdef528"><div class="source"><a href="https://www.notion.soundefined"></a></div></figure><h3 id="4755418a-2b06-4133-b751-b387d648892e" class="block-color-yellow_background">1. Define computer animation. Explain the stages to design animation sequences. (6)</h3><h3 id="c4816687-1a51-4a35-86d2-90186c22580f" class="">Answer</h3><p id="a169a133-743f-487a-8d01-07a353963c9b" class="">Computer animation encompasses a wide range of techniques and functions used to create animated content using digital tools.</p><p id="82857718-0e5f-40d7-9b07-43c7bc6ed1e3" class="">Designing animation sequences involves several stages:</p><h3 id="2c6cace7-3171-4dcb-a762-c582f660bfbc" class="block-color-blue_background">Storyboard Layout</h3><ul id="f6a081d0-a953-4174-96b6-b8b272515992" class="bulleted-list"><li style="list-style-type:disc">The storyboard is a <strong>series of sketches</strong> or a <strong>written outline</strong> that depicts the sequence of actions in the animation.</li></ul><ul id="fff8a7cc-169d-8053-a3e4-feb016fe7b19" class="bulleted-list"><li style="list-style-type:disc">It provides a <strong>visual plan</strong> for the animation and includes a brief description of the movements and interactions.</li></ul><h3 id="d313ca07-92d1-4a0c-92e7-c53bc798583f" class="block-color-blue_background">Object Definitions</h3><ul id="a6e09daa-016f-4a2f-a5f0-cd8f8b091774" class="bulleted-list"><li style="list-style-type:disc">Each object in the animation is defined in terms of its shape, size, and movement.</li></ul><ul id="35227ef4-bd1d-4914-8734-f8ad80baf197" class="bulleted-list"><li style="list-style-type:disc">Objects can be represented using basic shapes like polygons or more complex forms like spline surfaces. </li></ul><ul id="e6cbe5bf-ca40-40dc-9e3a-4337cfbc58ba" class="bulleted-list"><li style="list-style-type:disc">Descriptions include how each object will move and interact in the scene.</li></ul><h3 id="5392249a-473f-4a05-9c3d-c6cb35ee0d4c" class="block-color-blue_background">Keyframe Specifications</h3><ul id="5a106687-7c54-4e0e-8df4-a650dde7e88e" class="bulleted-list"><li style="list-style-type:disc">Key frames are detailed drawings of the scene at specific points in time.</li></ul><ul id="16e2d780-1960-4d1e-96af-d5bc3fccd3bc" class="bulleted-list"><li style="list-style-type:disc">Each key frame positions the objects in the scene according to the timeline. </li></ul><ul id="fff8a7cc-169d-8062-9029-e027e807ccf1" class="bulleted-list"><li style="list-style-type:disc">Key frames at extreme positions of the action are selected to capture <strong>significant moments</strong>.</li></ul><ul id="0aa17f76-30f1-4c78-9894-bca3ade9b524" class="bulleted-list"><li style="list-style-type:disc">More key frames are used for intricate motions to ensure <strong>smooth transitions</strong>.</li></ul><h3 id="c4e5a009-3a8a-43fe-a601-33ea27087901" class="block-color-blue_background">Generation of In-Between Frames</h3><ul id="76519a46-63b1-43cc-9182-544de57d5711" class="bulleted-list"><li style="list-style-type:disc">In-betweens, or tweens, are the <strong>frames that transition between key frames</strong> to create smooth motion.</li></ul><ul id="cfe9042e-9847-4414-bc0f-4168b48789ca" class="bulleted-list"><li style="list-style-type:disc">The number of in-betweens depends on the display medium&#x27;s frame rate.</li></ul><ul id="b66b1d6d-dee5-455e-b16f-091e4dcb3cfb" class="bulleted-list"><li style="list-style-type:disc">For example, film typically requires 24 frames per second, and graphics terminals refresh at 60 frames per second. </li></ul><ul id="54b6ce39-9ce5-4aa0-b65f-875fe41febd4" class="bulleted-list"><li style="list-style-type:disc">The animator sets time intervals to determine the number of in-betweens needed for each key frame pair.</li></ul><h3 id="35151878-3aae-423a-81b4-521fd47397e4" class="block-color-yellow_background">2. Explain OpenGL interactive input device functions.<br/>i) GLUT Keyboard functions<br/>ii) GLUT Mouse functions. (6)<br/></h3><h3 id="0841e5a4-d023-4726-9a08-edb356787dd5" class="">Answer</h3><ul id="9531e5a1-92b5-4a6d-b83b-cacdcc0d1f01" class="bulleted-list"><li style="list-style-type:disc">Event-driven input in interactive graphics programming involves setting up callback functions that are called in response to specific events, such as pressing a key on the keyboard or clicking a mouse button.</li></ul><ul id="21a15abd-aa02-43ac-bf15-dc8a84456d85" class="bulleted-list"><li style="list-style-type:disc">In the context of OpenGL and GLUT (OpenGL Utility Toolkit), various functions are available to handle these events.</li></ul><h3 id="caf377fb-bc43-49da-b92f-29a7d49cfb9e" class="block-color-blue_background">Keyboard Input</h3><ul id="c676fe47-2062-4b73-b0fc-c9b500645203" class="bulleted-list"><li style="list-style-type:disc">To handle keyboard input in GLUT, the <code>glutKeyboardFunc</code> function is used to specify a callback function that will be invoked when a key is pressed.</li></ul><ul id="e7bbab08-88e1-4ac2-aa64-b50f9906340c" class="bulleted-list"><li style="list-style-type:disc">The callback function typically takes <strong>three arguments</strong>: the key that was pressed, and the x and y coordinates of the mouse cursor at the time of the key press.<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="3bf08a00-e63f-41c4-a57d-9e31e0a09e13" class="code"><code class="language-C++">//Callback function for keyboard input
+void keyFcn(unsigned char key, int x, int y) {
+    switch (key) {
+        case 27:  // ESC key to exit
+            exit(0);
+            break;
+        case &#x27;r&#x27;:  // &#x27;r&#x27; key to perform some action
+            // Perform action
+            break;
+        default:
+            break;
+    }
+}</code></pre><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="22e8318c-b69a-43cc-b2ad-71c1c7c4dd29" class="code"><code class="language-C++">//Registering the keyboard callback in the main function
+glutKeyboardFunc(keyFcn);</code></pre></li></ul><p id="9f01f9d0-d27c-49be-9aad-92b368eb5957" class="">
+</p><h3 id="2a30c873-9f40-4b64-bb86-241de2c42aa4" class="block-color-blue_background">Mouse Input</h3><ul id="7cc39802-a874-4a46-b8bb-18fbc6b563a2" class="bulleted-list"><li style="list-style-type:disc">For mouse input, GLUT provides several functions to handle different mouse events. </li></ul><ul id="253166f8-0688-4b34-bd27-f334829d85e9" class="bulleted-list"><li style="list-style-type:disc">The <code>glutMouseFunc</code> function registers a callback function that is called when a mouse button is pressed or released.<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="fb0f1059-0426-481b-84da-ba64bfc8be32" class="code"><code class="language-C++">//Callback function for mouse input
+void mouseFcn(int button, int state, int x, int y) {
+    if (button == GLUT_LEFT_BUTTON &amp;&amp; state == GLUT_DOWN) {
+        // Handle left mouse button press
+    } else if (button == GLUT_RIGHT_BUTTON &amp;&amp; state == GLUT_DOWN) {
+        exit(0);
+    }
+}</code></pre><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="d5f57b73-fba3-471c-bad2-cf1ab663256b" class="code"><code class="language-C++">//Registering the mouse callback in the main function
+glutMouseFunc(mouseFcn);</code></pre></li></ul><p id="7dec5ab4-12cd-41e5-9e65-778100f0962a" class="">
+</p><ul id="45b7c894-7cbb-4206-8284-d06d202c2b84" class="bulleted-list"><li style="list-style-type:disc">GLUT also provides functions to handle mouse movement:<ul id="306180e0-92ea-4ad3-85c7-898c02a4cbc1" class="bulleted-list"><li style="list-style-type:circle"><code>glutMotionFunc</code> for handling mouse motion when a button is pressed.</li></ul><ul id="dab97d31-ebcb-45aa-bc32-fb8c5abee85f" class="bulleted-list"><li style="list-style-type:circle"><code>glutPassiveMotionFunc</code> for handling mouse motion when no buttons are pressed.</li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="ade35ef2-3ae9-4462-8bd9-2e7d1e1b2cac" class="code"><code class="language-C++">//Callback function for mouse motion with button pressed
+void motionFcn(int x, int y) {
+    // Handle mouse motion
+}</code></pre><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="f0070255-d408-41a3-86ff-a8f7ced8db64" class="code"><code class="language-C++">//Callback function for mouse motion with no buttons pressed
+void passiveMotionFcn(int x, int y) {
+    // Handle passive mouse motion
+}</code></pre><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="91d8e6d5-8eb0-442d-a8f0-ce8cd28acdd5" class="code"><code class="language-C++">//Registering the motion callback in the main function
+glutMotionFunc(motionFcn);
+glutPassiveMotionFunc(passiveMotionFcn);</code></pre><p id="e11ff7ea-e616-4f2f-8ea3-447c3156bea5" class="">
+</p></li></ul><h3 id="fff8a7cc-169d-80b5-84d0-cbbec092a34e" class="block-color-yellow_background">3. Discuss Interactive picture construction techniques. (8)</h3><h3 id="3620e863-30b4-49e0-a564-be25f7a21219" class="">Answer</h3><h3 id="e60c8aec-d67a-4a2d-a4b3-f1cb06069479" class="block-color-blue_background">Basic Positioning Methods</h3><ul id="96a39352-d541-48a2-8acb-f41c3b681e8b" class="bulleted-list"><li style="list-style-type:disc"><strong>Description:</strong> Users can interactively choose a coordinate position using a pointing device that records a screen location. The chosen position can be used for various purposes like defining the endpoint of a line, positioning an object, or specifying the location for a text string.</li></ul><ul id="23d82e5d-95e6-47c1-ac65-619549746ca1" class="bulleted-list"><li style="list-style-type:disc"><strong>Example:</strong> Numeric values for selected positions can be echoed on the screen, allowing users to make small adjustments interactively using dials, arrow keys, or other devices.</li></ul><h3 id="c862f128-542b-4c55-b46c-a27f11c94914" class="block-color-blue_background">Dragging</h3><ul id="58000f19-b14b-443b-b16d-afd11a697ed8" class="bulleted-list"><li style="list-style-type:disc"><strong>Description:</strong> This technique involves selecting an object and dragging it to a new location using a pointing device like a mouse. The object follows the cursor and is displayed at intermediate positions until the cursor reaches the final location.</li></ul><ul id="dac505e3-6152-47bd-8102-f77028d44d4b" class="bulleted-list"><li style="list-style-type:disc"><strong>Example:</strong> Position the cursor at an object&#x27;s position, press a mouse button, move the cursor to the desired location, and release the button to place the object.</li></ul><h3 id="16bff65d-753a-49d6-9c3a-b8466bec9a02" class="block-color-blue_background">Constraints</h3><ul id="e3e8e26d-ca68-4ab4-86c2-f0dde612066f" class="bulleted-list"><li style="list-style-type:disc"><strong>Example:</strong> When drawing a network layout, a horizontal-vertical constraint can ensure that input lines are automatically aligned without requiring precise positioning.</li></ul><ul id="96d22e38-a2a1-4d9c-9384-9ea57539a518" class="bulleted-list"><li style="list-style-type:disc"><strong>Description:</strong> Constraints are used to alter input coordinate values to achieve specific alignments or orientations. For instance, lines can be constrained to be horizontal, vertical, or at specific angles like 45 degrees.</li></ul><div id="33461794-613a-4f3c-bf5c-6edfc9eb254a" class="column-list"><div id="85386a4a-752b-4725-ba4c-620a99d1ea56" style="width:50%" class="column"><figure id="36dafd60-3b31-4a2c-9526-83207e4a3c41" class="image"><a href="M3_MQP_Answers%202d8f72ba0c6e437aac43d9a4a49f4a3a/image.png"><img style="width:432px" src="M3_MQP_Answers%202d8f72ba0c6e437aac43d9a4a49f4a3a/image.png"/></a><figcaption>Horizontal Line Constraint</figcaption></figure></div><div id="5d10b111-50a6-4c91-a45f-96a3d4225cf9" style="width:50.000000000000014%" class="column"><figure id="7af61356-94e8-4f68-b367-0160e9628f78" class="image"><a href="M3_MQP_Answers%202d8f72ba0c6e437aac43d9a4a49f4a3a/image%201.png"><img style="width:576px" src="M3_MQP_Answers%202d8f72ba0c6e437aac43d9a4a49f4a3a/image%201.png"/></a><figcaption>Vertical Line Constraint</figcaption></figure></div></div><h3 id="25dac5eb-a63d-46ed-8e82-436e42ebf457" class="block-color-blue_background">Grids</h3><div id="d76593c4-aa69-4f39-a982-eff3d709cbfe" class="column-list"><div id="1f359e25-8446-4c34-a0a6-1a95733603fb" style="width:50%" class="column"><ul id="89f15d69-4b4a-4e4c-a811-8fab8f7bb2e5" class="bulleted-list"><li style="list-style-type:disc"><strong>Description:</strong> A grid can be displayed on the screen, and input coordinates are snapped to the nearest grid intersection. This aids in precise object placement and alignment.</li></ul><ul id="6f33e2fe-7a2b-48c5-98c3-2e8d42e96f3b" class="bulleted-list"><li style="list-style-type:disc"><strong>Example:</strong> When drawing with a grid, selecting any position near a grid intersection allows for easy connection of new lines to previously drawn lines.</li></ul></div><div id="d1afe5f1-4899-45f4-9951-41896decce61" style="width:50%" class="column"><figure id="79ab5730-cf3d-4d81-a86b-14a5dc978c50" class="image"><a href="M3_MQP_Answers%202d8f72ba0c6e437aac43d9a4a49f4a3a/image%202.png"><img style="width:192px" src="M3_MQP_Answers%202d8f72ba0c6e437aac43d9a4a49f4a3a/image%202.png"/></a></figure></div></div><h3 id="e31630b5-8629-456b-b3cb-4fb1e85f387f" class="block-color-blue_background">Rubber Band Methods</h3><ul id="1bb95cc2-dda8-42b5-8226-66423e4415ca" class="bulleted-list"><li style="list-style-type:disc"><strong>Description:</strong> Rubber-band methods allow users to dynamically stretch or contract line segments and other shapes. A shape like a line or rectangle is interactively drawn by dragging the cursor, with one endpoint fixed.</li></ul><ul id="6e420dd4-7e6e-4c89-8115-cc670b0521bf" class="bulleted-list"><li style="list-style-type:disc"><strong>Example:</strong> A rubber-band line is drawn by fixing one endpoint and dragging the cursor to define the other endpoint, adjusting the line&#x27;s length and direction interactively.</li></ul><p id="e0534803-f447-450c-b54d-a46ff48b37f3" class="">
+</p><figure id="6f8cc431-9a39-4dab-b06e-2342a25d1120" class="image"><a href="M3_MQP_Answers%202d8f72ba0c6e437aac43d9a4a49f4a3a/image%203.png"><img style="width:528px" src="M3_MQP_Answers%202d8f72ba0c6e437aac43d9a4a49f4a3a/image%203.png"/></a><figcaption>A rubber-band method for constructing and positioning a straight-line segment.</figcaption></figure><p id="2847d724-c7dd-4c33-9bff-67ce08e2878d" class="">
+</p><h3 id="2c1bc89c-7015-472d-ac4a-e7e3e7c94af3" class="block-color-blue_background">Gravity Field</h3><div id="c84c658a-d0a9-4737-a8b2-a88d0b133157" class="column-list"><div id="fff8a7cc-169d-80e2-9ae9-c5de41e833cf" style="width:50%" class="column"><ul id="336c59ed-c167-45c0-8955-681535e66ae3" class="bulleted-list"><li style="list-style-type:disc"><strong>Description:</strong> Gravity fields help in connecting lines at positions not aligned with grid intersections by automatically snapping nearby points to the nearest line or endpoint.</li></ul><ul id="08f477de-6ebc-495c-96d5-112217f0786d" class="bulleted-list"><li style="list-style-type:disc"><strong>Example:</strong> When drawing a line, any point selected near an existing line within the gravity field is automatically moved to the nearest position on that line.</li></ul></div><div id="63d42961-786c-4060-9e99-181ce78bdb00" style="width:50%" class="column"><figure id="0eaa4b8f-48c7-413c-96d3-3d70d1d48516" class="image"><a href="M3_MQP_Answers%202d8f72ba0c6e437aac43d9a4a49f4a3a/image%204.png"><img style="width:206px" src="M3_MQP_Answers%202d8f72ba0c6e437aac43d9a4a49f4a3a/image%204.png"/></a><figcaption>A gravity field around a line. Any selected point in the shaded area is shifted to a position on the line.</figcaption></figure></div></div><h3 id="d15617a0-83d7-4924-894f-db0698b81dac" class="block-color-blue_background">Interactive Painting and Drawing Methods</h3><ul id="e298884f-6634-44b2-b14f-92df9f7d7792" class="bulleted-list"><li style="list-style-type:disc"><strong>Description:</strong> These methods provide tools for sketching, drawing, and painting. They include options for generating lines, polygons, circles, curves (like splines), and freehand drawing. Attributes like line width and style can also be adjusted.</li></ul><ul id="69f4a2cc-2fae-4296-a578-c698310b615d" class="bulleted-list"><li style="list-style-type:disc"><strong>Example:</strong> A spline can be created by specifying control points, with the system fitting a polynomial curve to these points. Freehand drawing follows the path of a stylus or cursor.</li></ul><p id="1b8fb8f6-38b5-4f4e-ac95-a17fea9a5ae5" class="">
+</p><h3 id="272e83f1-4160-4954-93f3-af24c707d53f" class="block-color-yellow_background">4. Explain the logical classification of input devices (6)</h3><h3 id="0131b889-cdf8-4815-a876-fcf21fc9ccc8" class="">Answer</h3><p id="cc1e641d-dcdd-49c0-a0ca-42692bfb0b86" class="">Logical input devices are classified according to the type of data they handle. The standard logical input-data classifications are:</p><table id="5e6b94ca-2670-4001-bce8-67c71f11c76d" class="simple-table"><thead class="simple-table-header"><tr id="e1c5e7f1-665f-401f-be7f-2e8da6ab04f7"><th id="dbGe" class="simple-table-header-color simple-table-header" style="width:319.99924723307294px">Device</th><th id="paJ_" class="simple-table-header-color simple-table-header" style="width:319.99924723307294px">Function</th><th id="Lnx]" class="simple-table-header-color simple-table-header" style="width:319.99924723307294px">Example</th></tr></thead><tbody><tr id="5a7c6d36-887f-4d7e-98cb-7316027d5677"><td id="dbGe" class="" style="width:319.99924723307294px">LOCATOR</td><td id="paJ_" class="" style="width:319.99924723307294px">Specifies one coordinate position.</td><td id="Lnx]" class="" style="width:319.99924723307294px">Mouse, Touchpad</td></tr><tr id="8e97c5c0-f666-4602-b194-7278a8c03135"><td id="dbGe" class="" style="width:319.99924723307294px">STROKE</td><td id="paJ_" class="" style="width:319.99924723307294px">Specifies a set of coordinate positions.</td><td id="Lnx]" class="" style="width:319.99924723307294px">Graphics tablet</td></tr><tr id="9489bb94-5e90-4a11-a65f-7d0b5999796b"><td id="dbGe" class="" style="width:319.99924723307294px">STRING</td><td id="paJ_" class="" style="width:319.99924723307294px">Specifies text input.</td><td id="Lnx]" class="" style="width:319.99924723307294px">Keyboard</td></tr><tr id="ae63d910-f621-44c5-abf1-a342316efd78"><td id="dbGe" class="" style="width:319.99924723307294px">VALUATOR</td><td id="paJ_" class="" style="width:319.99924723307294px">Specifies a scalar value.</td><td id="Lnx]" class="" style="width:319.99924723307294px">Control dials</td></tr><tr id="01145d69-384d-4216-b8ce-34d7e855cf38"><td id="dbGe" class="" style="width:319.99924723307294px">CHOICE</td><td id="paJ_" class="" style="width:319.99924723307294px">Selects a menu option.</td><td id="Lnx]" class="" style="width:319.99924723307294px">Menu selection using a mouse</td></tr><tr id="914af9e7-62b3-4679-8b42-fb2b467b120d"><td id="dbGe" class="" style="width:319.99924723307294px">PICK</td><td id="paJ_" class="" style="width:319.99924723307294px">Selects a component of a picture. </td><td id="Lnx]" class="" style="width:319.99924723307294px">Light pen</td></tr></tbody></table><h3 id="1bb9b1ce-b148-4269-a093-987f7dcbbce1" class="block-color-yellow_background">5. How are menus and submenus are created in OpenGL? Illustrate with an example. (8)</h3><h3 id="1a8f6f08-ae03-4e77-a7e8-befb7af44664" class="">Answer</h3><h3 id="4870df4f-94bf-4843-8ab8-651e19540680" class="block-color-blue_background">Menu Callback Function</h3><ul id="67b6c9b9-7400-4dbc-8e46-198697b2db5c" class="bulleted-list"><li style="list-style-type:disc">To handle menu events, you need a callback function that will be invoked when a menu item is selected. </li></ul><ul id="ee5e4834-11f1-4a19-8a3a-5017a4271e92" class="bulleted-list"><li style="list-style-type:disc">This function typically has a single integer parameter that indicates which menu item was selected.<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="b3768a25-e18b-4492-b9c3-2da27e2bb2d1" class="code"><code class="language-C++">void menuFcn(int option) {
+    switch (option) {
+        case 1:
+            // Action for the first menu item
+            break;
+        case 2:
+            // Action for the second menu item
+            break;
+        default:
+            break;
+    }
+}</code></pre></li></ul><p id="86187110-dad7-49fa-ad2d-1381ae9d8363" class="">
+</p><h3 id="2926463a-8148-4003-9aaa-706db4d352f5" class="block-color-blue_background">Creating and Adding Menu Entries</h3><ul id="8c9dfb52-2989-488a-ba17-e81619bd1218" class="bulleted-list"><li style="list-style-type:disc">You create a menu using <code>glutCreateMenu</code> and add entries to it using <code>glutAddMenuEntry</code>.</li></ul><ul id="caa103d3-908a-4385-82fb-f57ac4627e45" class="bulleted-list"><li style="list-style-type:disc">Each entry is associated with a <strong>string</strong> (displayed in the menu) and an <strong>integer identifier</strong> (passed to the callback function).<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="b13224f7-66dd-47a5-aa36-a30323e0653f" class="code"><code class="language-C++">int menu = glutCreateMenu(menuFcn);
+glutAddMenuEntry(&quot;First Menu Item&quot;, 1);
+glutAddMenuEntry(&quot;Second Menu Item&quot;, 2);</code></pre></li></ul><p id="b184f60e-980d-43ff-99a5-81af89a4410f" class="">
+</p><h3 id="616e177e-3a20-4da1-ac2c-38fe9f299ec5" class="block-color-blue_background">Attaching the Menu to a Mouse Button</h3><p id="09a3f704-be60-491e-ac0f-bfe8bbd48f72" class="">The menu is made accessible by attaching it to a mouse button using <code>glutAttachMenu</code>.</p><p id="d31b227f-3b0f-439f-b3ec-2aa386482c6b" class="">For example, to make the menu appear when the right mouse button is clicked:</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="cddc81a4-9b15-4ecc-9021-6ea1681162dc" class="code"><code class="language-C++">glutAttachMenu(GLUT_RIGHT_BUTTON);</code></pre><p id="1abb2b15-3f52-4bb2-bb40-ef5be7f5115e" class="">
+</p><h3 id="ad48814d-7ea5-453d-9835-c5b3d15e32f4" class="block-color-blue_background">Creating Submenus</h3><ul id="657e939b-cc85-4219-bd50-0fee7f05e0af" class="bulleted-list"><li style="list-style-type:disc">A submenu is created similarly to a menu but is associated with another menu item instead of a mouse button.</li></ul><ul id="45fcce34-4aab-4603-9c11-f0ba01884c99" class="bulleted-list"><li style="list-style-type:disc">First, create the submenu using <code>glutCreateMenu</code>, adding menu entries as before. Then, associate this submenu with a main menu item using <code>glutAddSubMenu</code>.</li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="7151f3c8-cd7f-446d-aa1c-4c5379e6b39e" class="code"><code class="language-C">int submenuID = glutCreateMenu(submenuFcn);
+glutAddMenuEntry(&quot;First Submenu Item&quot;, 1);
+glutAddMenuEntry(&quot;Second Submenu Item&quot;, 2);</code></pre><h3 id="fff8a7cc-169d-80ce-a70f-ea1515bdcfcb" class="block-color-blue_background">Attaching Submenus</h3><p id="9fd80e36-4a5b-4623-8983-2d7ae2cf5374" class="">After creating the submenu, you can attach it to a menu item in the main menu by using <code>glutAddSubMenu</code>. This adds an option in the main menu that displays the submenu when selected.</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="c84d30c2-5a2b-4f09-85bc-c9b5ff084d7b" class="code"><code class="language-C">glutCreateMenu(menuFcn);
+glutAddMenuEntry(&quot;First Menu Item&quot;, 1);
+glutAddSubMenu(&quot;Submenu Option&quot;, submenuID);</code></pre><h3 id="6dd61e89-f6a2-47d2-94dd-7b89f0bbefbf" class="block-color-blue_background">Complete Example</h3><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="1d91f1fb-9cbc-48aa-9465-12db41dc2da0" class="code"><code class="language-C">// Callback function for the submenu
+void submenuFcn(int option) {
+    switch (option) {
+        case 1:
+            // Action for the first submenu item
+            break;
+        case 2:
+            // Action for the second submenu item
+            break;
+        default:
+            break;
+    }
+    glutPostRedisplay();
+}
+
+// Callback function for the main menu
+void menuFcn(int option) {
+    switch (option) {
+        case 1:
+            // Action for the first menu item
+            break;
+        case 2:
+            // Action for the second menu item
+            break;
+        default:
+            break;
+    }
+    glutPostRedisplay();
+}
+
+void createMenus() {
+    // Create a submenu
+    int submenuID = glutCreateMenu(submenuFcn);
+    glutAddMenuEntry(&quot;First Submenu Item&quot;, 1);
+    glutAddMenuEntry(&quot;Second Submenu Item&quot;, 2);
+
+    // Create the main menu
+    int menuID = glutCreateMenu(menuFcn);
+    glutAddMenuEntry(&quot;First Menu Item&quot;, 1);
+    glutAddMenuEntry(&quot;Second Menu Item&quot;, 2);
+
+    // Attach the submenu to the main menu
+    glutAddSubMenu(&quot;Submenu Option&quot;, submenuID);
+
+    // Attach the main menu to the right mouse button
+    glutAttachMenu(GLUT_RIGHT_BUTTON);
+}
+
+int main(int argc, char** argv) {
+    // Standard OpenGL initialization
+    glutInit(&amp;argc, argv);
+    // Create window and other initialization code
+
+    createMenus();
+
+    // Enter the GLUT main loop
+    glutMainLoop();
+    return 0;
+}</code></pre><p id="1b0773f9-8d9b-484f-bc16-bf57b5fdfd42" class="">
+</p><h3 id="0c626883-d586-4c97-923b-2642b6c47cef" class="block-color-yellow_background">6. Write a complete OpenGL program to demonstrate animation effects on simple object. (6)</h3><h3 id="682a30e2-a902-4c87-ad29-3b0292f6bca8" class="">Answer</h3><p id="fff8a7cc-169d-809b-89bb-f679575f4bfc" class="">The program animates a rectangle moving horizontally across the screen.</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="8bcb5ca1-e4ee-4bc2-981c-63f5a1acf046" class="code"><code class="language-C">#include &lt;GL/glut.h&gt;
+
+float position = 0.0f;  // Position of the rectangle
+
+void init() {
+    // Set the background color to black
+    glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+}
+
+void display() {
+    // Clear the screen
+    glClear(GL_COLOR_BUFFER_BIT);
+
+    // Set the rectangle color to white
+    glColor3f(1.0f, 1.0f, 1.0f);
+
+    // Move the rectangle along the x-axis
+    glPushMatrix();
+    glTranslatef(position, 0.0f, 0.0f);
+    
+    // Draw a rectangle
+    glBegin(GL_POLYGON);
+        glVertex2f(-0.1f, -0.1f);
+        glVertex2f( 0.1f, -0.1f);
+        glVertex2f( 0.1f,  0.1f);
+        glVertex2f(-0.1f,  0.1f);
+    glEnd();
+    
+    glPopMatrix();
+
+    // Swap buffers and display the new frame
+    glutSwapBuffers();
+}
+
+void timer(int) {
+    // Update the position of the rectangle
+    position += 0.01f;
+    
+    // Reset position if the rectangle moves off screen
+    if (position &gt; 1.0f) {
+        position = -1.0f;
+    }
+    
+    // Redisplay the frame
+    glutPostRedisplay();
+
+    // Register the timer callback again
+    glutTimerFunc(16, timer, 0);  // Approximately 60 FPS
+}
+
+int main(int argc, char** argv) {
+    glutInit(&amp;argc, argv);
+    glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB);
+    glutInitWindowSize(500, 500);
+    glutCreateWindow(&quot;Basic Animation Example&quot;);
+
+    init();
+
+    glutDisplayFunc(display);
+    glutTimerFunc(0, timer, 0);
+
+    glutMainLoop();
+    return 0;
+}</code></pre><p id="c006d464-a83c-4b56-a279-e0b2119d4e11" class="">
+</p><h3 id="511d01a4-7494-4cbf-b973-67842ebceb80" class="block-color-yellow_background">7. Explain the following Picture construction techniques<br/>a. Basic Positioning Methods.<br/>b. Dragging. (8)<br/></h3><h3 id="fa1e4603-1b95-412c-acf6-fe8ec3fe70d2" class="">Answer</h3><p id="a7e67951-2467-4904-a6f7-b5204b2c2545" class="">Refer Q3</p><h3 id="8cbfbbe7-8fa7-4ca9-bb2e-8be3f512b15e" class="block-color-yellow_background">8. Explain the various Mouse and Keyboard functions available in GLUT. (6)</h3><h3 id="a31ee41a-f7b1-467c-b6ea-b49ade1353ed" class="">Answer</h3><p id="9ef48d3b-7446-44c3-baa5-7bd01dc64567" class="">Refer Q2</p><h3 id="09e78090-3895-40d7-b6bb-67079b8de123" class="block-color-yellow_background">9. Explain the various components and types of Computer Animation Languages. (6)</h3><h3 id="33b7762b-7cbc-4395-80d3-e80b0de686dc" class="">Answer</h3><h3 id="c51b423a-25e1-49c1-a860-e523cd8b41e4" class="block-color-blue_background">General Purpose Programming Languages</h3><ul id="dc10f1fd-9711-4c92-b6f5-e1ef0e74eed0" class="bulleted-list"><li style="list-style-type:disc"><strong>Description:</strong> Animation routines can be developed using general-purpose languages like C, C++, Lisp, or Fortran.</li></ul><ul id="b414290c-e74b-4a8e-b508-224e602d5b41" class="bulleted-list"><li style="list-style-type:disc"><strong>Functionality:</strong> These languages can be used to design and control animation sequences but require significant manual coding.</li></ul><h3 id="4a05c1f6-4019-4d25-90f0-d00f7281686c" class="block-color-blue_background">Specialized Animation Languages</h3><ul id="f2c94b06-e749-422f-9954-105e9696b8a4" class="bulleted-list"><li style="list-style-type:disc"><strong>Description:</strong> These languages are designed specifically for creating and managing animations.</li></ul><ul id="319a1b68-3596-4e55-bc75-838902498e94" class="bulleted-list"><li style="list-style-type:disc"><strong>Key Components:</strong><ul id="ecb04857-26b1-45b4-af26-9fab86fad373" class="bulleted-list"><li style="list-style-type:circle"><strong>Graphics Editor:</strong> Allows animators to design and modify object shapes using methods like spline surfaces and constructive solid geometry.</li></ul><ul id="7b8721fb-9b1e-4073-a84d-3dd505dd4d72" class="bulleted-list"><li style="list-style-type:circle"><strong>Key-Frame Generator:</strong> Enables the creation of key frames, which are critical positions in the animation.</li></ul><ul id="56431f0a-9d14-482d-8415-d66f73665507" class="bulleted-list"><li style="list-style-type:circle"><strong>In-Between Generator:</strong> Automatically generates the frames between key frames to create smooth transitions.</li></ul><ul id="57b23bec-4ea3-40ba-822e-d0e32a21c2cd" class="bulleted-list"><li style="list-style-type:circle"><strong>Standard Graphics Routines:</strong> Includes routines for geometric transformations, viewing, and perspective transformations, visible-surface identification, and surface rendering.</li></ul></li></ul><h3 id="ec8d1c91-c119-4cc4-a866-ccb941341f70" class="block-color-blue_background">Scene Description</h3><ul id="b8b44582-feae-474b-b2db-7a71a5bb463e" class="bulleted-list"><li style="list-style-type:disc"><strong>Description:</strong> A crucial part of animation specification involving the setup of the scene.</li></ul><ul id="957e0ee8-61ea-41f2-9929-e0757f17bd3e" class="bulleted-list"><li style="list-style-type:disc"><strong>Components:</strong><ul id="28e949c0-554a-460a-87cc-e6a446a3aa54" class="bulleted-list"><li style="list-style-type:circle"><strong>Object Positioning:</strong> Determining where objects will be located in the scene.</li></ul><ul id="bfb45928-c72d-4515-a6e6-0825d41fd674" class="bulleted-list"><li style="list-style-type:circle"><strong>Light Sources:</strong> Positioning and defining the intensity of light sources.</li></ul><ul id="655eaeee-0845-49ad-b6c2-8050524fa7d9" class="bulleted-list"><li style="list-style-type:circle"><strong>Camera Parameters:</strong> Setting the camera&#x27;s position, orientation, and lens characteristics.</li></ul></li></ul><h3 id="70a7f796-f4a2-41c6-b47f-32097323e5c5" class="block-color-blue_background">Action Specification</h3><ul id="3a8ff4d2-a83e-4c70-b229-57ad7136b58a" class="bulleted-list"><li style="list-style-type:disc"><strong>Description:</strong> Involves defining the motion paths for objects and cameras.</li></ul><ul id="8550c397-be0d-46fd-ab7d-800e49c6492b" class="bulleted-list"><li style="list-style-type:disc"><strong>Components:</strong><ul id="94b0dfb1-5f30-4eec-8821-52995362bd69" class="bulleted-list"><li style="list-style-type:circle"><strong>Motion Paths:</strong> Layout paths along which objects and the camera will move.</li></ul><ul id="0fb7f4f0-df34-4ab2-8805-110de5073537" class="bulleted-list"><li style="list-style-type:circle"><strong>Geometric Transformations:</strong> Used to generate object movements according to specified motion parameters.</li></ul><ul id="40406ace-ef90-4188-8b91-7b8964f97a46" class="bulleted-list"><li style="list-style-type:circle"><strong>Surface Rendering:</strong> Handles the visualization of surfaces during the animation.</li></ul></li></ul><h3 id="7db177e6-0440-4656-a3f9-0ff36cb80e45" class="block-color-blue_background">Keyframe Systems</h3><ul id="8a7e544b-899f-4d56-b37a-33c0607df9c9" class="bulleted-list"><li style="list-style-type:disc"><strong>Description:</strong> Originally separate routines, now often part of general animation packages.</li></ul><ul id="34b3daa7-972d-4d5e-b4bd-a2126c5fffa7" class="bulleted-list"><li style="list-style-type:disc"><strong>Functionality:</strong> These systems generate in-between frames from user-specified key frames.</li></ul><ul id="9cef2bfb-ecd8-4380-a67c-98440974e4e7" class="bulleted-list"><li style="list-style-type:disc"><strong>Example:</strong> A robot arm with multiple degrees of freedom is defined by key frames representing various positions, and the system generates the frames in between.</li></ul><h3 id="6bb1ab42-e3ec-45ad-95b4-4cf82955b6ad" class="block-color-blue_background">Parameterized Systems</h3><ul id="72992fc7-1a28-4716-92e2-16b2fa91f53a" class="bulleted-list"><li style="list-style-type:disc"><strong>Description:</strong> Allows object motion characteristics to be defined as part of the object definitions.</li></ul><ul id="ce596d4f-9739-4349-b70f-0f2009f3e00d" class="bulleted-list"><li style="list-style-type:disc"><strong>Functionality:</strong> Parameters control characteristics like degrees of freedom, motion limitations, and shape changes.</li></ul><h3 id="b0dbb07d-4519-45f3-95b5-b88a0d5768a0" class="block-color-blue_background">Scripting Systems</h3><ul id="2b7f441c-bb07-4597-b4bb-5b9f599b8fbe" class="bulleted-list"><li style="list-style-type:disc"><strong>Description:</strong> Allows the specification of objects and animation sequences through user-input scripts.</li></ul><ul id="61616503-9c21-4cff-b348-3b5710ede728" class="bulleted-list"><li style="list-style-type:disc"><strong>Functionality:</strong> From a script, libraries of objects and motions are constructed, allowing for reusable and easily modifiable animations.</li></ul><p id="9863e10b-631f-4521-bac4-ee57e9f18f1c" class="">
+</p><h3 id="1993a425-44a5-4596-b88a-6068470d08b3" class="block-color-yellow_background">10. Repeat Q4</h3><h3 id="ffb821f8-9577-4152-98ea-39ffb1a49699" class="block-color-yellow_background">11. Write a note on OpenGL animation procedure. (6)</h3><h3 id="9a4bcc86-422e-4150-9b57-6e2232522aa2" class="">Answer</h3><h3 id="91630518-8882-4dab-8248-d3bd6ad59264" class="block-color-blue_background">Double Buffering</h3><ul id="11cccbf7-83d3-4576-b444-352ce7eef289" class="bulleted-list"><li style="list-style-type:disc"><strong>Description:</strong> Double-buffering uses two buffers (front and back) to refresh the screen display without flickering. While one buffer displays the current frame, the next frame is constructed in the other buffer.</li></ul><ul id="40301e21-d5bf-4072-adc3-9215d566ff0f" class="bulleted-list"><li style="list-style-type:disc"><strong>Activation:</strong> Double-buffering is activated using <code>glutInitDisplayMode(GLUT_DOUBLE)</code>.</li></ul><ul id="57b69147-5655-4302-a9d5-bc08036aa40a" class="bulleted-list"><li style="list-style-type:disc"><strong>Buffer Swap:</strong> <code>glutSwapBuffers()</code> is used to interchange the roles of the front and back buffers.</li></ul><h3 id="fff8a7cc-169d-8037-9890-e6eb20be552b" class="block-color-blue_background">Checking for Double Buffering</h3><ul id="2544ad8f-7485-4489-89ba-8f22ea4de71f" class="bulleted-list"><li style="list-style-type:disc"><strong>Query:</strong> The availability of double-buffering on a system can be checked using:<br/><br/></li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="fff8a7cc-169d-8011-b9b1-c4dcfb1b8083" class="code"><code class="language-C">glGetBooleanv(GL_DOUBLEBUFFER, status);</code></pre><ul id="bff25835-2b40-40f4-a9ca-28215c234fbf" class="bulleted-list"><li style="list-style-type:disc"><strong>Return Value:</strong> Returns <code>GL_TRUE</code> if both front and back buffers are available, otherwise <code>GL_FALSE</code>.</li></ul><h3 id="5f079091-5c99-4975-9510-5a8d81c521e0" class="block-color-blue_background">Continuous Animation</h3><ul id="678599ce-2a63-4558-a8d8-e854b1289d8b" class="bulleted-list"><li style="list-style-type:disc"><strong>Idle Function:</strong> Continuous animation can be achieved using the <code>glutIdleFunc(animationFcn)</code>, where <code>animationFcn</code> is the function responsible for updating animation parameters whenever no other events are being processed.</li></ul><ul id="3aff0080-94e8-42e9-9a6e-cd3ccc73e790" class="bulleted-list"><li style="list-style-type:disc"><strong>Stopping Animation:</strong> The idle function can be disabled by setting <code>glutIdleFunc</code> to <code>NULL</code>.</li></ul><p id="16d9d573-a154-4989-aa43-833170379313" class="">
+</p><h3 id="08348456-3006-4564-ad95-aab928e1cb7f" class="block-color-yellow_background">12. Explain how character animation is achieved using<br/>a. Articulated Figure Animations.<br/>b. Motion Capture. (8)<br/></h3><h3 id="e4b4882c-eb10-4eef-b0a0-10267de5c429" class="">Answer</h3><h3 id="6cac32d0-2b0c-41cc-9038-c75b7c882083" class="block-color-blue_background">Articulated Figure Animations</h3><figure id="44650573-d1b4-4510-9b93-3481a07f5052" class="image"><a href="M3_MQP_Answers%202d8f72ba0c6e437aac43d9a4a49f4a3a/image%205.png"><img style="width:224.98843383789062px" src="M3_MQP_Answers%202d8f72ba0c6e437aac43d9a4a49f4a3a/image%205.png"/></a><figcaption>A simple articulated figure with nine joints and twelve connecting links, not counting the oval head.</figcaption></figure><ul id="465ed624-b44a-484d-8ff4-6bb71e534e70" class="bulleted-list"><li style="list-style-type:disc"><strong>Definition:</strong><ul id="ddbc6326-06d8-4db7-a8fe-eb58a357b443" class="bulleted-list"><li style="list-style-type:circle">Articulated figures are hierarchical structures composed of rigid links connected at rotary joints (see figure above). These links represent parts of a figure, like the limbs of a human or the segments of an insect.</li></ul></li></ul><ul id="5b7254e8-3d15-4946-a259-af0aa9539bde" class="bulleted-list"><li style="list-style-type:disc"><strong>Joint Connections:</strong><ul id="ee8c0f43-4972-48c3-808e-e349b875b075" class="bulleted-list"><li style="list-style-type:circle">The joints in an articulated figure correspond to points like shoulders, hips, knees, and other skeletal joints.</li></ul><ul id="07201f7a-0531-4a1c-bae1-1a1f74f9cf61" class="bulleted-list"><li style="list-style-type:circle">Each joint can move in a specified manner, such as rotation or translation, simulating natural movements like walking or running.</li></ul></li></ul><ul id="347d7775-dfa5-40f1-962a-ef93313e2129" class="bulleted-list"><li style="list-style-type:disc"><strong>Motion Paths:</strong><ul id="2fb1d0b2-1e4f-4f64-aa54-5ba67313ebd4" class="bulleted-list"><li style="list-style-type:circle">Motions are defined by translating and rotating the joints.</li></ul><ul id="d2d23da7-10c0-46de-b64a-e97d2b0eb60d" class="bulleted-list"><li style="list-style-type:circle">Example: A walking leg motion (see figure below) is simulated by translating the hip joint and rotating the knee and ankle joints.</li></ul></li></ul><ul id="225b6e1f-d315-417c-bbda-e841b5466160" class="bulleted-list"><li style="list-style-type:disc"><strong>Cycle of Motion:</strong><ul id="19a348c9-63b5-4b2d-8da5-d50d3a4c2fe8" class="bulleted-list"><li style="list-style-type:circle">The motion cycle is repeated over time, simulating continuous movements, such as a walking cycle.</li></ul></li></ul><ul id="52af734b-6751-46b3-ac74-49897b912bdd" class="bulleted-list"><li style="list-style-type:disc"><strong>Additional Motions:</strong><ul id="1b818668-92d6-4a3b-a4f7-a1eb61a43b5f" class="bulleted-list"><li style="list-style-type:circle">Additional motions, like sinusoidal movements or rocking motions, can be added to different parts of the figure for more realism.</li></ul></li></ul><ul id="19df35f9-930f-4508-adef-86bbbc6dadb5" class="bulleted-list"><li style="list-style-type:disc"><strong>Kinematic Descriptions:</strong><ul id="6eec92e8-ab9d-4ab4-8157-add532d58267" class="bulleted-list"><li style="list-style-type:circle">Both kinematic-motion descriptions and inverse kinematics are used to control the motion paths of joints, providing realistic animation of the articulated figure.</li></ul><p id="734d31f7-f587-4eb5-b6de-37a681b05fa7" class="">
+</p></li></ul><figure id="8447b19a-dad2-45d3-bb2f-63fee872b319" class="image"><a href="M3_MQP_Answers%202d8f72ba0c6e437aac43d9a4a49f4a3a/image%206.png"><img style="width:576px" src="M3_MQP_Answers%202d8f72ba0c6e437aac43d9a4a49f4a3a/image%206.png"/></a><figcaption>Possible motions for a set of connected links representing a walking leg.</figcaption></figure><h3 id="b4f411c7-3bc0-4b71-9e6d-458a213bcf44" class="block-color-blue_background">Motion Capture</h3><ul id="d9cb2f1e-a69e-4e27-bbb1-0d05967e064e" class="bulleted-list"><li style="list-style-type:disc"><strong>Definition:</strong><ul id="547e2c88-fa6c-45d6-b78e-9446f216008e" class="bulleted-list"><li style="list-style-type:circle">Motion capture (or mo-cap) is a technique to digitally record the movement of a live actor and apply it to an animated character.</li></ul></li></ul><ul id="1a8c3f5f-ad79-4ba6-ab1a-0f3e700a5068" class="bulleted-list"><li style="list-style-type:disc"><strong>Procedure:</strong><ul id="b1680d8e-b749-4609-9c0a-da13555d213e" class="bulleted-list"><li style="list-style-type:circle"><strong>Markers Placement:</strong> Reflective markers are placed on the actor’s body at key points (e.g., arms, legs, joints).</li></ul><ul id="bb71b5da-052e-4f58-a02d-0a9352f8acc7" class="bulleted-list"><li style="list-style-type:circle"><strong>Camera Recording:</strong> Multiple cameras capture the markers&#x27; positions from different angles.</li></ul><ul id="3c055b9e-3d92-4575-b533-2ffc717e780e" class="bulleted-list"><li style="list-style-type:circle"><strong>Data Processing:</strong> The captured data is processed to extract the 3D coordinates of the markers, which are then mapped onto the animated character.</li></ul></li></ul><ul id="8dcc8876-20d4-4f97-88ff-991e8fab9c35" class="bulleted-list"><li style="list-style-type:disc"><strong>Types of Systems:</strong><ul id="f5ccc38b-ed9b-4c24-9bda-de981c07a765" class="bulleted-list"><li style="list-style-type:circle"><strong>Passive Systems:</strong> Use reflective markers illuminated by light.</li></ul><ul id="eebe675a-9f42-4b5a-b6d3-58cb9cbb1ec4" class="bulleted-list"><li style="list-style-type:circle"><strong>Active Systems:</strong> Use markers that emit their own light.</li></ul><ul id="bf60b4ad-2fdc-40c7-bcde-b121b079a525" class="bulleted-list"><li style="list-style-type:circle"><strong>Non-optical Systems:</strong> Use sensors like inertial or magnetic sensors to capture motion data.</li></ul></li></ul><ul id="6cdc1516-e1de-47ce-b8aa-201dce8e5aad" class="bulleted-list"><li style="list-style-type:disc"><strong>Application:</strong><ul id="a13db987-51cf-4539-bfa6-1209bb3a4d18" class="bulleted-list"><li style="list-style-type:circle">Motion capture is used to replicate complex movements, such as those of a human body, onto animated characters.</li></ul></li></ul><ul id="dfe67178-ea9d-4c54-a475-bd24366c583b" class="bulleted-list"><li style="list-style-type:disc"><strong>Performance Capture:</strong><ul id="7c90b46f-93c1-41b0-a429-46c9deb92a49" class="bulleted-list"><li style="list-style-type:circle">A specialized form of motion capture focused on recording detailed facial expressions and movements.</li></ul><ul id="f01dcaf5-4de0-45e1-8a7c-7f4d872fb734" class="bulleted-list"><li style="list-style-type:circle"><strong>Markers and LEDs:</strong> Photoreflective markers and LEDs are attached to the actor’s face, and cameras capture the subtle movements, which are then used for facial animation of the character.</li></ul><p id="37859b4d-686b-47a9-836e-440932ce4c7c" class="">
+</p></li></ul><h3 id="ef2ca19f-cc8d-4f84-8d5f-65e695ce545b" class="block-color-yellow_background">13. Repeat Q1</h3><h3 id="7994536f-46e5-470a-97bc-07948a271d3b" class="block-color-yellow_background">14. Repeat Q2</h3><h3 id="f5dff292-fa9f-4029-8327-bfe852446a54" class="block-color-yellow_background">15. Repeat Q9</h3><h3 id="0eb2336b-8221-40a7-8ee0-f8824ee8294b" class="block-color-yellow_background">16. Repeat Q4</h3><h3 id="11c0a138-f3cf-4634-81ec-3c550e0451a7" class="block-color-yellow_background">17. Repeat Q11</h3><h3 id="74cd1c33-b3c7-4dbf-8bbc-e59332188eca" class="block-color-yellow_background">18. Repeat Q12</h3><h3 id="0eaaa899-6882-4339-848a-7530cc6f3be1" class="block-color-yellow_background">19. Repeat Q4</h3><h3 id="d82b83c2-8525-4696-901b-3cfe5a1e8c10" class="block-color-yellow_background">20. Repeat Q3</h3><h3 id="8de1c8cf-883e-40ad-ba6c-cedf298ca930" class="block-color-yellow_background">21. Repeat Q2</h3><h3 id="9faf27a0-3105-42c5-8cda-ce053dec2611" class="block-color-yellow_background">22. Repeat Q5</h3><h3 id="58634773-54ae-444e-a6fa-83192ec29ef2" class="block-color-yellow_background">23. Repeat Q11</h3><h3 id="2f3478f2-5b2c-48d6-8aa5-cb98b04bfebb" class="block-color-yellow_background">23. Repeat Q11</h3><h3 id="e6367cda-3618-46a6-ab33-685b2b0b9641" class="block-color-yellow_background">24. Repeat Q12</h3></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
